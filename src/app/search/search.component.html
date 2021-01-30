@@ -1,0 +1,56 @@
+<section
+  class="container d-flex align-items-center justify-content-center"
+  id="searchbar"
+>
+  <form action="submit" id="form">
+    <div class="form-group">
+      <div class="row">
+        <div
+          class="col-xm-12 col-sm-12 col-md-12 col-lg-12 col-xl12"
+          id="search-col"
+        >
+          <input
+            type="text"
+            #textsearch
+            name="searchtext"
+            id="searchtext"
+            placeholder="Search here"
+            ngModel
+          />
+        </div>
+        <div
+          class="col-xm-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-right"
+        >
+          <button
+            type="submit"
+            class="btn btn-primary"
+            id="submitBtn"
+            (click)="trySearch($event, textsearch)"
+          >
+            Search
+            <fa-icon [icon]="['fas', 'search']"></fa-icon>
+          </button>
+
+          <button type="reset" class="btn btn-danger" id="clearBtn">
+            Clear
+            <fa-icon [icon]="['fas', 'trash']"></fa-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+  </form>
+</section>
+
+<section
+  class="container d-flex align-items-center justify-content-center"
+  id="searchresult"
+>
+  <div class="row">
+    <div class="col-xl-12 col-sm-12 col-md-12 col-lg-12">
+      <div class="text-center" *ngFor="let data of data" id="display">
+        <a href="{{ data.url }}" target="_blank">{{ data.name }}</a>
+        <hr />
+      </div>
+    </div>
+  </div>
+</section>

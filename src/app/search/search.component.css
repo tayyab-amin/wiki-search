@@ -1,0 +1,23 @@
+#searchbar {
+  height: 30vh;
+  background-color: darkgray;
+}
+
+#searchtext {
+  width: 100%;
+  border-radius: 15px;
+  padding: 0px 20px;
+  height: 6vh;
+}
+
+button {
+  border-radius: 15px;
+}
+
+#search-col {
+  padding: 2vh 2vh;
+}
+
+#searchresult {
+  background-color: whitesmoke;
+}
