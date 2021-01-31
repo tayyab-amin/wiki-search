@@ -8,14 +8,13 @@ import axios from 'axios';
   styleUrls: ['./search.component.css'],
 })
 export class SearchComponent implements OnInit {
-  searchtext: any;
+  searchtext: string = '';
   data: any = [];
   constructor() {}
   ngOnInit(): void {}
 
   trySearch(e, textsearch) {
     e.preventDefault();
-
     var url = 'https://en.wikipedia.org/w/api.php';
     var params = {
       action: 'opensearch',
@@ -30,8 +29,14 @@ export class SearchComponent implements OnInit {
       this.data = response.data[1].map((name, index) => {
         return { name, url: response.data[3][index] };
       });
-      debugger;
       return response;
     });
+  }
+
+  clearResult(e) {
+    e.preventDefault();
+    this.data = [];
+    this.searchtext = '';
+    // document.getElementById('searchtext');
   }
 }

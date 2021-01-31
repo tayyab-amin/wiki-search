@@ -46,9 +46,27 @@
   id="searchresult"
 >
   <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+      <button
+        (click)="clearResult($event)"
+        class="btn btn-danger"
+        id="clearBtn"
+      >
+        Clear Search Result
+        <fa-icon [icon]="['fas', 'trash']"></fa-icon>
+      </button>
+    </div>
+  </div>
+</section>
+<section
+  class="container d-flex align-items-center justify-content-center"
+  id="searchresult"
+>
+  <div class="row">
     <div class="col-xl-12 col-sm-12 col-md-12 col-lg-12">
       <div class="text-center" *ngFor="let data of data" id="display">
-        <a href="{{ data.url }}" target="_blank">{{ data.name }}</a>
+        <a href="{{ data.url }}" target="_blank">{{ data.name }}</a> <br />
+        <a href="{{ data.url }}" target="_blank">{{ data.url }}</a>
         <hr />
       </div>
     </div>

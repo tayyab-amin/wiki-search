@@ -6,8 +6,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SearchComponent } from './search/search.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
-import { NgForm, FormsModule, FormGroup } from '@angular/forms';
-
 import {
   faSearch as faSearch,
   faTrash as faTrash,
@@ -23,9 +21,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     NgbModule,
     FontAwesomeModule,
     BrowserAnimationsModule,
-    // NgForm,
-    // FormsModule,
-    // FormGroup,
   ],
   providers: [],
   bootstrap: [AppComponent],
