@@ -10,6 +10,7 @@ import axios from 'axios';
 export class SearchComponent implements OnInit {
   searchtext: string = '';
   data: any = [];
+
   constructor() {}
   ngOnInit(): void {}
 
@@ -33,10 +34,7 @@ export class SearchComponent implements OnInit {
     });
   }
 
-  clearResult(e) {
-    e.preventDefault();
+  clearResult() {
     this.data = [];
-    this.searchtext = '';
-    // document.getElementById('searchtext');
   }
 }

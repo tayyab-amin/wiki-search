@@ -16,6 +16,7 @@
             id="searchtext"
             placeholder="Search here"
             ngModel
+            required
           />
         </div>
         <div
@@ -31,7 +32,12 @@
             <fa-icon [icon]="['fas', 'search']"></fa-icon>
           </button>
 
-          <button type="reset" class="btn btn-danger" id="clearBtn">
+          <button
+            type="reset"
+            (click)="clearResult()"
+            class="btn btn-danger"
+            id="clearBtn"
+          >
             Clear
             <fa-icon [icon]="['fas', 'trash']"></fa-icon>
           </button>
@@ -41,23 +47,6 @@
   </form>
 </section>
 
-<section
-  class="container d-flex align-items-center justify-content-center"
-  id="searchresult"
->
-  <div class="row">
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-      <button
-        (click)="clearResult($event)"
-        class="btn btn-danger"
-        id="clearBtn"
-      >
-        Clear Search Result
-        <fa-icon [icon]="['fas', 'trash']"></fa-icon>
-      </button>
-    </div>
-  </div>
-</section>
 <section
   class="container d-flex align-items-center justify-content-center"
   id="searchresult"
